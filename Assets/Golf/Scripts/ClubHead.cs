@@ -5,14 +5,18 @@ using UnityEngine;
 
 public class ClubHead : MonoBehaviour
 
-{
+{	
+	public bool useScript = false;
+
 	[SerializeField]
 	private ClubHeadFollower clubHeadFollowerPrefab;
 
 	private void Awake()
 	{
-		
-		SpawnClubHeadFollower();
+		if (useScript)
+		{
+			SpawnClubHeadFollower();
+		}
 
 	}
 
